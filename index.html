@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/3colsmenu.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<div id="topbox">
+    <img src="images/popcap.png" style="position:relative;float:left; height:90%"/>
+    <h1 id="headtext" style="font-size:60px">CAREERS</h1>
+</div>
+
+<!-- Log-in Pop-ups -->
+<div class="popups" id="loginPopups">
+    <div class="popups-content">
+        <span class="close" onclick="closeLoginPopUps()">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div id="captchaContainer">
+                <label for="captcha">Captcha:</label>
+                <input type="text" id="captcha" name="captcha" required>
+                <span id="captchaText"></span>
+                <button type="button" onclick="refreshCaptcha()">Refresh Captcha</button>
+            </div>
+
+            <button type="button" onclick="submitLoginForm()">Login</button>
+        </form>
+    </div>
+</div>
+
+<div class="navbar">
+    <a href="index.html">CAREERS</a>
+    <a href="news.html">ABOUT</a>
+    <button onclick="changeBackgroundColor('white')">ON</button>
+    <button onclick="changeBackgroundColor('black')">OFF</button>
+    <div class="dropdown"></div>
+    <div class="dropdown">
+        <button class="dropbtn">GAME
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="https://plants-vs-zombies.en.uptodown.com/windows">DOWNLOAD</a>
+            <a href="https://signin.ea.com/p/juno/login?execution=e664893808s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Finitref_replay%3Dfalse%26display%3DjunoWeb%252Flogin%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.ea.com%252Flogin_check%26locale%3Den_US%26client_id%3DEADOTCOM-WEB-SERVER">SIGN IN</a>
+            <a href="https://signin.ea.com/p/juno/create?execution=e664893809s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Finitref_replay%3Dfalse%26display%3DjunoWeb%252Fcreate%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.ea.com%252Flogin_check%26locale%3Den_US%26client_id%3DEADOTCOM-WEB-SERVER">CREATE ACCOUNT</a>
+        </div>
+    </div>
+    <button class="button1" onclick="login()">Log-in</button>
+</div>
+
+<div id="maindiv">
+    <div id="col1">
+        <h3> Life @ PopCap
+            PopCap is on the hunt for whip-smart creative people with a passion for making the world’s best games — like Bejeweled, Peggle, and Plants vs. Zombies.
+
+            It’s more than just another day at the office. With beautiful locations around the world, we embrace diversity and pour ourselves into our work to make the best games possible. And with lots of employee programs and activities, we don’t only make fun — we have lots of fun, too.
+        </h3>
+        <img src="images/main.png" style="position:relative;float:left;height:79%;width:100%"/>
+    </div>
+    <div id="col2">
+        <img class="small-image" src="images/col2p1.png" style="position:relative;float:left;height:33%;width:100%" onclick="openImagePopup('images/col2p1.png')"/>
+        <img class="small-image1" src="images/col2p2.jpg" style="position:relative;float:left;height:33%;width:100%" onclick="openImagePopup('images/col2p2.jpg')"/>
+        <img class="small-image2" src="images/col2p3.jpg" style="position:relative;float:left;height:33%;width:100%" onclick="openImagePopup('images/col2p3.jpg')"/>
+
+        <div class="popup" id="popup">
+            <img id="popupImage" style="width:80%; height:80%">
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+</div>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+</div>
+
+</body>
+</html>
